@@ -9,7 +9,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/encrypt-path/:text", (req: Request, res: Response) => {
     const plainText = req.params.text;
-    res.send({encrypted: encryptString(plainText)});
+    res.json({encrypted: encryptString(plainText)});
 });
 
 app.listen(port, () => {
